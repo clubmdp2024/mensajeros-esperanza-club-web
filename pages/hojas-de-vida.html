@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hojas de vida</title>
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body data-page="hojas">
+  <header class="site-header">
+    <div class="brand-box">
+      <img src="../img/logo-campamento.png" alt="Logo del campamento" class="brand-logo" />
+      <div class="brand-copy">
+        <p class="eyebrow">CLUB DE GUÍAS MAYORES</p>
+        <h1>Mensajeros de Esperanza - Carepa</h1>
+        <p class="subcopy">Carpeta digital del club</p>
+      </div>
+    </div>
+
+      <nav class="main-nav">
+        <!-- Navegación principal del sitio -->
+        <a href="../index.html" data-nav="inicio">Inicio</a>
+        <a href="hojas-de-vida.html" data-nav="hojas">Hojas de vida</a>
+        <a href="historia.html" data-nav="historia">Historia del club</a>
+        <a href="cronograma.html" data-nav="cronograma">Cronograma</a>
+        <a href="vision-mision-proposito.html" data-nav="vision">Visión, misión y propósito</a>
+        <a href="registro-fotografico.html" data-nav="registro">Registro fotográfico</a>
+      </nav>
+
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-copy">
+        <p class="page-tag">HOJAS DE VIDA</p>
+        <h2>Consulta y visualiza las hojas de vida del club.</h2>
+        <p>El diseño de esta vista está pensado para que el archivo PDF sea protagonista, con una presentación limpia, elegante y fácil de reemplazar.</p>
+      </div>
+      <div class="hero-side"><img src="../img/logo-campamento.png" alt="Logo del campamento"></div>
+    </section>
+    
+<section class="content-panel">
+  <h3 class="panel-title">Documento PDF vinculado</h3>
+  <p class="panel-text">
+    Esta sección está preparada para mostrar el PDF oficial de las hojas de vida.
+    Por ahora queda enlazada una plantilla con diseño base. Cuando tengas el documento real,
+    reemplázalo dentro de la carpeta <strong>/pdf</strong> conservando el mismo nombre del archivo.
+  </p>
+  <iframe class="pdf-frame" src="../pdf/hojas_de_vida.pdf"></iframe>
+  <div class="download-row">
+    <a href="../pdf/hojas_de_vida.pdf" target="_blank" class="primary-btn">Abrir PDF</a>
+    <a href="../pdf/hojas_de_vida.pdf" download class="secondary-btn">Descargar PDF</a>
+  </div>
+</section>
+
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

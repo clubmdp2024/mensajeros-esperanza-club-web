@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <!-- Logo temporal del club. Reemplaza este archivo por el SVG oficial cuando lo tengas. -->
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#C68A2D"/>
+      <stop offset="100%" stop-color="#7A2313"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" rx="40" fill="#101010"/>
+  <circle cx="300" cy="220" r="140" fill="none" stroke="url(#g)" stroke-width="18"/>
+  <path d="M220 380 L300 140 L380 380" fill="none" stroke="#F0E3C0" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 300 L350 300" fill="none" stroke="#F0E3C0" stroke-width="24" stroke-linecap="round"/>
+  <text x="300" y="470" font-size="42" font-family="Arial, sans-serif" fill="#F0E3C0" text-anchor="middle" font-weight="700">MENSAJEROS</text>
+  <text x="300" y="518" font-size="34" font-family="Arial, sans-serif" fill="#C68A2D" text-anchor="middle">DE ESPERANZA</text>
+</svg>
