@@ -60,9 +60,37 @@
         <img src="img/25_años_logo_mensajeros.png" alt="Imagen de referencia del campamento" class="hero-logo" />
       </div>
     </section>
-    <section>
-      <model-viewer src="models/santuario.glb" auto-rotate camera-controls style="width: 100%; height: 500px;">
-      </model-viewer>
+    <!-- SCRIPT DEL VISOR 3D -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <!-- SECCIÓN DEL SANTUARIO -->
+    <section class="santuario-section">
+
+      <!-- TEXTO SUPERIOR SIMPLE -->
+      <div class="santuario-top-text">
+        <h2>Si quieres apreciar el santuario, interactúa con él.</h2>
+        <p>Arrastra con el mouse para girar, usa la rueda para acercarte y explora sus detalles.</p>
+      </div>
+
+      <!-- CONTENEDOR GRANDE DEL VISOR -->
+      <div class="santuario-viewer-container" id="viewerContainer">
+
+        <!-- CONTROLES SUPERIORES -->
+        <div class="viewer-controls">
+          <button type="button" onclick="resetView()">Reiniciar vista</button>
+          <button type="button" onclick="fullscreenViewer()">Pantalla completa</button>
+        </div>
+
+        <!-- MODELO 3D -->
+        <model-viewer id="santuarioViewer" src="models/santuario.glb" alt="Modelo 3D del santuario" camera-controls
+          touch-action="pan-y" interaction-prompt="auto" shadow-intensity="1.1" exposure="1.15"
+          interpolation-decay="120" camera-orbit="35deg 72deg 18m" camera-target="0m 1.5m -1.5m"
+          min-camera-orbit="auto 5deg 0.15m" max-camera-orbit="auto 89deg 1500m" field-of-view="28deg"
+          min-field-of-view="6deg" max-field-of-view="95deg" style="width: 100%; height: 100%;">
+        </model-viewer>
+
+      </div>
+
     </section>
 
 
@@ -70,6 +98,33 @@
 
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script>
+    /* OBTENER ELEMENTOS PRINCIPALES */
+    const viewer = document.getElementById("santuarioViewer");
+    const viewerContainer = document.getElementById("viewerContainer");
+
+    /* REINICIAR LA VISTA A UNA POSICIÓN CÓMODA */
+    function resetView() {
+      if (!viewer) return;
+
+      viewer.cameraOrbit = "35deg 72deg 18m";
+      viewer.cameraTarget = "0m 1.5m -1.5m";
+      viewer.fieldOfView = "28deg";
+    }
+
+    /* ACTIVAR PANTALLA COMPLETA */
+    function fullscreenViewer() {
+      if (!viewerContainer) return;
+
+      if (viewerContainer.requestFullscreen) {
+        viewerContainer.requestFullscreen();
+      } else if (viewerContainer.webkitRequestFullscreen) {
+        viewerContainer.webkitRequestFullscreen();
+      } else if (viewerContainer.msRequestFullscreen) {
+        viewerContainer.msRequestFullscreen();
+      }
+    }
+  </script>
 </body>
 
 </html>
