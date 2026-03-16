@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>Carpeta Digital - Mensajeros de Esperanza Carepa</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- Encabezado fijo del sitio principal -->
   <header class="site-header">
@@ -36,13 +38,16 @@
         <p class="hero-kicker">INICIO</p>
         <h2>Bienvenido a la carpeta digital del club de guías mayores <span>Mensajeros de Esperanza Carepa</span>.</h2>
         <p>
-          Este espacio reúne de manera ordenada los documentos, la memoria histórica, el cronograma,
-          la identidad institucional y el registro fotográfico de las actividades del club.
+          Este espacio reúne la memoria, los documentos y el registro de las actividades del club, organizados para
+          conservar su historia y compartir el camino recorrido.
         </p>
         <p>
-          La propuesta visual toma como referencia la paleta cromática del campamento
-          <strong>“En la Presencia del Santuario”</strong>, buscando una estética sobria,
-          elegante y fácil de actualizar.
+          En esta etapa especial se presenta una versión conmemorativa del logo por los 25 años, símbolo del crecimiento
+          y compromiso que ha marcado a cada generación.
+        </p>
+        <p>
+          La experiencia visual de esta carpeta toma inspiración en el campamento “En la Presencia del Santuario”,
+          reflejando su identidad y significado espiritual.
         </p>
         <div class="hero-actions">
           <a href="pages/historia.html" class="primary-btn">Explorar carpeta</a>
@@ -52,26 +57,19 @@
 
       <div class="hero-card">
         <div class="card-glow"></div>
-        <img src="img/logo-campamento.png" alt="Imagen de referencia del campamento" class="hero-logo" />
+        <img src="img/25_años_logo_mensajeros.png" alt="Imagen de referencia del campamento" class="hero-logo" />
       </div>
     </section>
-
-    <section class="quick-grid">
-      <article class="quick-item">
-        <h3>Archivo organizado</h3>
-        <p>Acceso rápido a documentos en PDF, textos institucionales y galerías por actividad.</p>
-      </article>
-      <article class="quick-item">
-        <h3>Diseño uniforme</h3>
-        <p>Las subpáginas comparten encabezado, estilos, hovers y estructura clara para edición manual.</p>
-      </article>
-      <article class="quick-item">
-        <h3>Fácil de modificar</h3>
-        <p>Todo el código tiene comentarios para que puedas cambiar textos, enlaces, imágenes y colores.</p>
-      </article>
+    <section>
+      <model-viewer src="models/santuario.glb" auto-rotate camera-controls style="width: 100%; height: 500px;">
+      </model-viewer>
     </section>
+
+
   </main>
 
   <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
+
 </html>
